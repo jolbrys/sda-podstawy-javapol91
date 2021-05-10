@@ -1,12 +1,6 @@
-package com.sda.oop.figury;
-
-import java.util.Scanner;
+package com.sda.oop.figury_notatka;
 
 public class Prostokat {
-
-    public Prostokat() {
-    }
-
     public Prostokat(double a, double b) {
         this.a = a;
         this.b = b;
@@ -14,15 +8,6 @@ public class Prostokat {
 
     private double a;
     private double b;
-
-    public void zczytaj(){
-        System.out.println("podaj boki");
-        Scanner input = new Scanner(System.in);
-        double a = input.nextDouble();
-        double b = input.nextDouble();
-        this.a = a;
-        this.b = b;
-    }
 
     public double getA() {
         return a;

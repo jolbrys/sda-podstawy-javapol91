@@ -1,4 +1,4 @@
-package com.sda.varargs;
+package com.sda.dalsze.varargs;
 
 public class VarArgsDoMaina {
     public static void main(String[] args) {

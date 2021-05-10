@@ -1,4 +1,4 @@
-package com.sda.varargs;
+package com.sda.dalsze.varargs;
 
 public class Zadanie1 {
     public static void main(String[] args) {

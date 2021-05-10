@@ -1,17 +1,30 @@
 package com.sda.oop.figury;
 
+import java.util.Scanner;
+
 public class Kolo {
-    public Kolo(int rad) {
-        this.rad = rad;
+
+    public Kolo() {
     }
 
-    private int rad;
-
-    public int getRad() {
-        return rad;
+    public Kolo(double r) {
+        this.r = r;
     }
 
-    public void setRad(int rad) {
-        this.rad = rad;
+    private double r;
+
+    public void zczytaj(){
+        System.out.println("podaj promien");
+        Scanner input = new Scanner(System.in);
+        double r = input.nextDouble();
+        this.r = r;
+    }
+
+    public double getR() {
+        return r;
+    }
+
+    public void setR(double r) {
+        this.r = r;
     }
 }
