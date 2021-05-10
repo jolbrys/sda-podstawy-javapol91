@@ -1,19 +1,29 @@
 package com.sda.dalsze.regex;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Zadanie1 {
     //napisz walidator dla numeru PESEL
+    //napisz walidator dla numeru IBAN (2 duze litery i 28 cyfr)
+    //zrobcie jeden przyklad ktory przejdzie i jeden ktory nie przejdzie
     public static void main(String[] args) {
-        Pattern peselPattern = Pattern.compile("[a-zA-Z0-9.-_%]+@[a-zA-Z0-9]*\\.[a-zA-Z]+");
-        if(peselPattern.matcher("asdf@gma.il.com").matches())
-        {
-            System.out.println("email legit");
-        };
+        //piszemy wyrazenie regularne(regex) i przypisujemy do zmiennej string
+        String peselRegex = "[0-9]{11}";
+        //na podstawie regexa tworzymy obiekt klasy Pattern, z którego Java wie jak potraktowac wyrazenie regularne
+        Pattern peselPattern = Pattern.compile(peselRegex);
+        //string ktory bedziemy walidowac
+        String input = "93122112345";
+        //wywolujemy metode matcher z klasy Pattern, ktora zwraca nam obiekt klasy Matcher
+        Matcher nasz_matcher = peselPattern.matcher(input);
 
-
+        if(nasz_matcher.matches()){
+            System.out.println("pesel jest poprawny");
+        }
+        else{
+            System.out.println("pesel nie jest poprawny");
+        }
     }
-
 }
 
 //przeniesiemy to na koniec do metody
