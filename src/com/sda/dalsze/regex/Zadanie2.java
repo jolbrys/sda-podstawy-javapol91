@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Zadanie2 {
     public static void main(String[] args) {
-        String text = "John Doe, age:27 id:123123456, phone:555-123-123";
+        String text = "John Doe, age:27 id:123123456, phone:555-1231-23";
         Pattern pattern = Pattern.compile("([a-zA-Z]*)\\s([a-zA-Z]*).*age:([0-9]*).*id:([0-9]*)" +
                 ".*phone:([0-9].*-?[0-9].*-?[0-9].*-?[0-9].*-?[0-9].*)");
 
